@@ -46,6 +46,7 @@ data class E2MTypography(
         val bold: TextStyle,
         val medium: TextStyle,
         val semiBold: TextStyle,
+        val regular: TextStyle,
     )
 
     data class Title(
@@ -158,6 +159,13 @@ data class E2MTypography(
                     fontWeight = FontWeight.Medium,
                     fontSize = 20.sp,
                     lineHeight = 28.sp,
+                    letterSpacing = (-0.6).sp,
+                ),
+                regular = TextStyle(
+                    fontFamily = E2MFontFamily,
+                    fontWeight = FontWeight.Normal,
+                    fontSize = 24.sp,
+                    lineHeight = 24.sp,
                     letterSpacing = (-0.6).sp,
                 ),
             ),

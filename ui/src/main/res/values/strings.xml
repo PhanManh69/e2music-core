@@ -18,4 +18,8 @@
     <string name="loginWithAppleID">Đăng nhập bằng Apple ID</string>
     <string name="noAccount">Bạn chưa có tài khoản?</string>
     <string name="register">Đăng ký</string>
+    <string name="forgotPassword">Quên mật khẩu</string>
+    <string name="sendToEmail">Gửi mã về email</string>
+    <string name="resendCodeLater">Gửi lại mã sau</string>
+    <string name="confirm">Xác nhận</string>
 </resources>

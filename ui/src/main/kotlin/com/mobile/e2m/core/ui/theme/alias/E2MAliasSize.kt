@@ -23,6 +23,7 @@ data class E2MAliasSize(
     data class Stroke(
         val thin: Dp,
         val thick: Dp,
+        val thickX: Dp,
     )
 
     data class Spacing(
@@ -70,6 +71,7 @@ data class E2MAliasSize(
             stroke = Stroke(
                 thin = global.size05,
                 thick = global.size001,
+                thickX = global.size002,
             ),
             spacing = Spacing(
                 none = global.size000,

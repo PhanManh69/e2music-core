@@ -3,9 +3,11 @@ package com.mobile.e2m.core.ui.composable
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Text
@@ -13,6 +15,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import com.mobile.e2m.core.ui.theme.E2MTheme
 
@@ -21,23 +24,41 @@ fun E2MIdentityPasscode(
     modifier: Modifier = Modifier,
     passcode: String,
     length: Int,
+    caption: String? = null,
 ) {
     val emptyDigit = '_'
     val normalizedPasscode = passcode.take(length).padEnd(length, emptyDigit)
+    val style = E2MTheme.typography
+    val color = E2MTheme.alias.color
+    val size = E2MTheme.alias.size
 
-    Row(
-        modifier = modifier.fillMaxWidth(),
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        repeat(length) { index ->
-            PasscodeDigit(
-                digit = if (normalizedPasscode[index] == '_') null else normalizedPasscode[index],
-                isFocused = passcode.length == index
-            )
+    Column {
+        Row(
+            modifier = modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            repeat(length) { index ->
+                PasscodeDigit(
+                    digit = if (normalizedPasscode[index] == '_') null else normalizedPasscode[index],
+                    isFocused = passcode.length == index
+                )
 
-            if (index != (length - 1)) {
-                Spacer(modifier = Modifier.weight(1f))
+                if (index != (length - 1)) {
+                    Spacer(modifier = Modifier.weight(1f))
+                }
             }
+        }
+
+        caption?.let {
+            Text(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = size.spacing.smallX),
+                text = caption,
+                style = style.title.regular,
+                color = color.text.error,
+                textAlign = TextAlign.Center,
+            )
         }
     }
 }

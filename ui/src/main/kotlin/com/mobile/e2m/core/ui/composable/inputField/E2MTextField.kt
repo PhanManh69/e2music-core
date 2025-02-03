@@ -23,6 +23,7 @@ import androidx.compose.ui.focus.FocusState
 import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -38,6 +39,7 @@ fun E2MTextField(
     iconId: Int? = null,
     onValueChange: (String) -> Unit = { },
     trailingIconOnClick: () -> Unit = { },
+    textStyle: TextStyle = E2MTheme.typography.title.regular,
     visualTransformation: VisualTransformation = VisualTransformation.None,
     keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
     keyboardActions: KeyboardActions = KeyboardActions.Default,
@@ -58,13 +60,13 @@ fun E2MTextField(
                     blurRadius = size.spacing.small4x
                 )
                 .background(
-                    color = E2MTheme.alias.color.surface.textField,
-                    shape = RoundedCornerShape(E2MTheme.alias.size.radius.radius7),
+                    color = color.surface.textField,
+                    shape = RoundedCornerShape(size.radius.radius7),
                 )
                 .border(
                     width = 1.dp,
                     color = if (isFocused.value) color.border.blurDark else color.border.textField,
-                    shape = RoundedCornerShape(E2MTheme.alias.size.radius.radius7)
+                    shape = RoundedCornerShape(size.radius.radius7)
                 )
                 .onFocusChanged { focusState ->
                     isFocused.value = focusState.hasFocus
@@ -72,12 +74,12 @@ fun E2MTextField(
                 },
             value = value,
             onValueChange = onValueChange,
-            textStyle = style.title.regular,
+            textStyle = textStyle,
             maxLines = 1,
             singleLine = true,
             contentPadding = PaddingValues(horizontal = 24.dp),
             visualTransformation = visualTransformation,
-            shape = RoundedCornerShape(E2MTheme.alias.size.radius.radius7),
+            shape = RoundedCornerShape(size.radius.radius7),
             placeholder = {
                 Text(
                     text = placeholder,

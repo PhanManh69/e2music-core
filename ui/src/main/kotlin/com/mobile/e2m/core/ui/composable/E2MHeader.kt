@@ -1,6 +1,7 @@
 package com.mobile.e2m.core.ui.composable
 
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.asPaddingValues
@@ -11,6 +12,7 @@ import androidx.compose.foundation.layout.statusBars
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
@@ -39,7 +41,10 @@ fun E2MHeader(
                 modifier = Modifier
                     .size(size.icon.smallX)
                     .align(Alignment.CenterStart)
-                    .clickable { leadingIconOnClick() },
+                    .clickable(
+                        interactionSource = remember { MutableInteractionSource() },
+                        indication = null,
+                    ) { leadingIconOnClick() },
                 painter = painterResource(id = iconId),
                 contentDescription = null,
                 tint = color.icon.white

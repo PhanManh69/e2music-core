@@ -58,6 +58,7 @@ data class E2MTypography(
     )
 
     data class Base(
+        val none: TextStyle,
         val regular: TextStyle,
         val medium: TextStyle,
         val semiBold: TextStyle,
@@ -207,6 +208,13 @@ data class E2MTypography(
                 ),
             ),
             base = Base(
+                none = TextStyle(
+                    fontFamily = E2MFontFamily,
+                    fontWeight = FontWeight.Normal,
+                    fontSize = 0.1.sp,
+                    lineHeight = 0.1.sp,
+                    letterSpacing = (-0.1).sp,
+                ),
                 regular = TextStyle(
                     fontFamily = E2MFontFamily,
                     fontWeight = FontWeight.Normal,

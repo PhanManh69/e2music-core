@@ -40,6 +40,7 @@ data class E2MAliasSize(
         val large3X: Dp,
         val large4x: Dp,
         val large5x: Dp,
+        val max: Dp,
     )
 
     data class Icon(
@@ -87,6 +88,7 @@ data class E2MAliasSize(
                 large3X = global.size048,
                 large4x = global.size064,
                 large5x = global.size096,
+                max = global.sizeMax,
             ),
             icon = Icon(
                 small4X = global.size008,

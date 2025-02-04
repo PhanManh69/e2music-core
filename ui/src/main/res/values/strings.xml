@@ -22,4 +22,7 @@
     <string name="sendToEmail">Gửi mã về email</string>
     <string name="resendCodeLater">Gửi lại mã sau</string>
     <string name="confirm">Xác nhận</string>
+    <string name="resetPassword">Tạo lại mật khẩu</string>
+    <string name="enterNewPassword">Nhập mật khẩu mới</string>
+    <string name="enterConfirmPassword">Nhập lại mật khẩu</string>
 </resources>

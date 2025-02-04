@@ -1,4 +1,4 @@
-package com.mobile.e2m.core.ui.composable.shadow
+package com.mobile.e2m.core.ui.composable
 
 import android.graphics.BlurMaskFilter
 import androidx.compose.runtime.remember

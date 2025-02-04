@@ -1,4 +1,4 @@
-package com.mobile.e2m.core.ui.composable
+package com.mobile.e2m.core.ui.composable.inputField
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -31,7 +31,6 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
-import com.mobile.e2m.core.ui.composable.inputField.E2MTextField
 import com.mobile.e2m.core.ui.theme.E2MTheme
 
 @Composable

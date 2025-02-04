@@ -27,7 +27,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.mobile.e2m.core.ui.composable.shadow.shadowCustom
+import com.mobile.e2m.core.ui.composable.shadowCustom
 import com.mobile.e2m.core.ui.theme.E2MTheme
 
 @Composable

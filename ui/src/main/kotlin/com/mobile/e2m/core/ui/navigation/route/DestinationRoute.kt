@@ -12,5 +12,6 @@ object DestinationRoute {
         const val STARTED = "started_route"
         const val LOGIN = "login_route"
         const val FORGOT_PASSWORD = "forgot_password_route"
+        const val RESET_PASSWORD = "reset_password_route"
     }
 }

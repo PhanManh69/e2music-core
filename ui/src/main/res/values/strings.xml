@@ -23,12 +23,25 @@
     <string name="resetPassword">Tạo lại mật khẩu</string>
     <string name="enterNewPassword">Nhập mật khẩu mới</string>
     <string name="enterConfirmPassword">Nhập lại mật khẩu</string>
+    <string name="enterUsername">Nhập tên đăng nhập</string>
+    <string name="enterFullname">Nhập họ và tên</string>
+    <string name="enterEmail">Nhập email của bạn</string>
     <string name="errorEmptyEmailAcc">Vui lòng nhập email hoặc tài khoản của bạn</string>
     <string name="errorNotEmailAcc">Không tìm thấy email hoặc tài khoản của bạn</string>
     <string name="errorEmptyPasscode">Vui lòng nhập mã xác nhận của bạn</string>
     <string name="errorWrongPasscode">Mã xác thực của bạn không chính xác</string>
     <string name="errorEmptyNewPassword">Vui lòng nhập mật khẩu mới của bạn</string>
     <string name="errorWrongFormatPassword">Vui lòng tạo mật khẩu lớn hơn 6 ký tự</string>
+    <string name="errorMissingUpperCase">Mật khẩu phải có ít nhất một ký tự in hoa</string>
+    <string name="errorMissingLetterDigit">Mật khẩu gồm cả ký tự chữ và số</string>
     <string name="errorEmptyConfirmPassword">Vui lòng xác thực lại mật khẩu của bạn</string>
     <string name="errorWrongResetPassword">Mật khẩu xác thực không khớp</string>
+    <string name="errorEmptyUsername">Vui lòng nhập tên đăng nhập của bạn</string>
+    <string name="errorWrongFormatUsername">Tên đăng nhập chứa từ 6 đến 18 ký tự</string>
+    <string name="errorHasExistedUsername">Tên đăng nhập đã tồn tại, hãy nhập lại!</string>
+    <string name="errorImpossibleUsername">Tên đăng nhập không được chứa dấu khoảng trắng và ký tự đặc biệt</string>
+    <string name="errorEmptyFullname">Vui lòng nhập họ và tên của bạn</string>
+    <string name="errorEmptyEmail">Vui lòng nhập email của bạn</string>
+    <string name="errorHasExistedEmail">Email đã tồn tại, hãy nhập lại email!</string>
+    <string name="errorWrongFormatEmail">Vui lòng nhập email đúng định dang</string>
 </resources>

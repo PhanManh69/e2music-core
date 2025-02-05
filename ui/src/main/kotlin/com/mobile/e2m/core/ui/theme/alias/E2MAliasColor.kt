@@ -36,6 +36,7 @@ data class E2MAliasColor(
         val white: Color,
         val blurDark: Color,
         val textField: Color,
+        val error: Color,
     )
 
     data class Icon(
@@ -63,13 +64,14 @@ data class E2MAliasColor(
                 whiteDark = global.write.color800,
                 blurDark = global.blurDark.color100,
                 textFieldPlaceholder = global.black.color800,
-                error = global.red.color100,
+                error = global.red.color200,
                 blur2Light = global.blurLight.color800,
             ),
             border = Border(
                 white = global.write.color100,
                 blurDark = global.blurDark.color100,
                 textField = global.black.color800,
+                error = global.red.color200,
             ),
             icon = Icon(
                 black = global.black.color100,

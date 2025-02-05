@@ -119,11 +119,9 @@ fun E2MButton(
                 shape = RoundedCornerShape(size.radius.radius7),
             )
             .focusable(interactionSource = interactionSource)
-            .clickable(
-                interactionSource = interactionSource,
-                indication = null,
-                onClick = { onClick() }
-            ),
+            .debounceClickable(
+                interactionSource = interactionSource
+            ) { onClick() },
         horizontalArrangement = Arrangement.spacedBy(size.spacing.smallX, Alignment.CenterHorizontally),
         verticalAlignment = Alignment.CenterVertically,
     ) {

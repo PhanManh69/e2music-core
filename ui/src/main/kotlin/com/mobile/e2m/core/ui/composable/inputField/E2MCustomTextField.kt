@@ -13,19 +13,22 @@ import androidx.compose.material3.TextFieldColors
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.VisualTransformation
 import com.mobile.e2m.core.ui.theme.E2MTheme
+import com.mobile.e2m.core.ui.util.ValueConfig.MAX_CHARACTER
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun E2MCustomTextField(
-    value: String,
-    onValueChange: (String) -> Unit,
     modifier: Modifier = Modifier,
+    value: MutableState<String> = remember { mutableStateOf("") },
+    onValueChange: ((String) -> Unit)? = null,
     enabled: Boolean = true,
     readOnly: Boolean = false,
     textStyle: TextStyle = LocalTextStyle.current,
@@ -43,6 +46,7 @@ fun E2MCustomTextField(
     singleLine: Boolean = false,
     maxLines: Int = if (singleLine) 1 else Int.MAX_VALUE,
     minLines: Int = 1,
+    maxCharacter: Int = MAX_CHARACTER,
     mutableInteractionSource: MutableInteractionSource? = null,
     shape: Shape = TextFieldDefaults.shape,
     colors: TextFieldColors = TextFieldDefaults.colors(),
@@ -53,14 +57,16 @@ fun E2MCustomTextField(
 
     CompositionLocalProvider(LocalTextSelectionColors provides colors.textSelectionColors) {
         BasicTextField(
-            value = value,
-            modifier =
-            modifier
+            value = value.value,
+            modifier = modifier
                 .defaultMinSize(
                     minWidth = TextFieldDefaults.MinWidth,
                     minHeight = TextFieldDefaults.MinHeight
                 ),
-            onValueChange = onValueChange,
+            onValueChange = {
+                value.value = it.take(maxCharacter)
+                onValueChange?.invoke(value.value)
+            },
             enabled = enabled,
             readOnly = readOnly,
             textStyle = textStyle,
@@ -77,7 +83,7 @@ fun E2MCustomTextField(
                         horizontal = size.spacing.large,
                         vertical = size.spacing.small,
                     ),
-                    value = value,
+                    value = value.value,
                     visualTransformation = visualTransformation,
                     innerTextField = innerTextField,
                     placeholder = placeholder,

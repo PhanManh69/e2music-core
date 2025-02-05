@@ -2,6 +2,7 @@ package com.mobile.e2m.core.ui.composable.inputField
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -29,15 +30,17 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.mobile.e2m.core.ui.composable.shadowCustom
 import com.mobile.e2m.core.ui.theme.E2MTheme
+import com.mobile.e2m.core.ui.util.ValueConfig.MAX_LINE
 
 @Composable
 fun E2MTextField(
     modifier: Modifier = Modifier,
-    value: String = "",
+    initText: String = "",
     placeholder: String = "",
     caption: String? = null,
     iconId: Int? = null,
-    onValueChange: (String) -> Unit = { },
+    maxLines: Int = MAX_LINE,
+    onValueChange: ((String) -> Unit)? = null,
     trailingIconOnClick: () -> Unit = { },
     textStyle: TextStyle = E2MTheme.typography.title.regular,
     visualTransformation: VisualTransformation = VisualTransformation.None,
@@ -49,6 +52,11 @@ fun E2MTextField(
     val style = E2MTheme.typography
     val size = E2MTheme.alias.size
     val color = E2MTheme.alias.color
+    val borderColor = when {
+        isFocused.value && caption.isNullOrEmpty() -> color.border.blurDark
+        !caption.isNullOrEmpty() -> color.border.error
+        else -> color.border.textField
+    }
 
     Column {
         E2MCustomTextField(
@@ -65,19 +73,19 @@ fun E2MTextField(
                 )
                 .border(
                     width = 1.dp,
-                    color = if (isFocused.value) color.border.blurDark else color.border.textField,
+                    color = borderColor,
                     shape = RoundedCornerShape(size.radius.radius7)
                 )
                 .onFocusChanged { focusState ->
                     isFocused.value = focusState.hasFocus
                     onFocusChanged?.invoke(focusState)
                 },
-            value = value,
+            value = remember { mutableStateOf(initText) },
             onValueChange = onValueChange,
             textStyle = textStyle,
-            maxLines = 1,
+            maxLines = maxLines,
             singleLine = true,
-            contentPadding = PaddingValues(horizontal = 24.dp),
+            contentPadding = PaddingValues(horizontal = size.spacing.large),
             visualTransformation = visualTransformation,
             shape = RoundedCornerShape(size.radius.radius7),
             placeholder = {
@@ -121,7 +129,7 @@ fun E2MTextField(
                     top = size.spacing.smallX
                 ),
                 text = caption,
-                style = style.title.regular,
+                style = style.small.regular,
                 color = color.text.error,
             )
         }
@@ -131,13 +139,16 @@ fun E2MTextField(
 @Preview
 @Composable
 fun E2MTextFieldPreview() {
-    val value = remember { mutableStateOf("") }
+    Column(
+        verticalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
+        E2MTextField(
+            placeholder = "Nhập tài khoản hoặc email"
+        )
 
-    E2MTextField(
-        value = value.value,
-        onValueChange = { newValue ->
-            value.value = newValue
-        },
-        placeholder = "Nhập tài khoản hoặc email"
-    )
+        E2MTextField(
+            placeholder = "Nhập tài khoản hoặc email",
+            caption = "Error"
+        )
+    }
 }

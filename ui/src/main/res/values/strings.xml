@@ -9,8 +9,6 @@
         Đăng nhập tài khoản của bạn đên tiếp tục</string>
     <string name="enterAccountEmail">Nhập tài khoản hoặc email</string>
     <string name="enterPassword">Nhập mật khẩu</string>
-    <string name="errorNotAccount">Không tìm thấy tài khoản của bạn</string>
-    <string name="errorWrongPassword">Mật khẩu không khớp với tên tài khoản</string>
     <string name="passwordRecovery">Quyên mật khẩu?</string>
     <string name="continueWith">Phương thức khác</string>
     <string name="loginWithGoogle">Đăng nhập bằng Google</string>
@@ -25,4 +23,12 @@
     <string name="resetPassword">Tạo lại mật khẩu</string>
     <string name="enterNewPassword">Nhập mật khẩu mới</string>
     <string name="enterConfirmPassword">Nhập lại mật khẩu</string>
+    <string name="errorEmptyEmailAcc">Vui lòng nhập email hoặc tài khoản của bạn</string>
+    <string name="errorNotEmailAcc">Không tìm thấy email hoặc tài khoản của bạn</string>
+    <string name="errorEmptyPasscode">Vui lòng nhập mã xác nhận của bạn</string>
+    <string name="errorWrongPasscode">Mã xác thực của bạn không chính xác</string>
+    <string name="errorEmptyNewPassword">Vui lòng nhập mật khẩu mới của bạn</string>
+    <string name="errorWrongFormatPassword">Vui lòng tạo mật khẩu lớn hơn 6 ký tự</string>
+    <string name="errorEmptyConfirmPassword">Vui lòng xác thực lại mật khẩu của bạn</string>
+    <string name="errorWrongResetPassword">Mật khẩu xác thực không khớp</string>
 </resources>

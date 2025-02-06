@@ -9,7 +9,7 @@ import androidx.compose.ui.Modifier
 
 @Composable
 inline fun Modifier.debounceClickable(
-    debounceInterval: Long = 400,
+    debounceInterval: Long = 800,
     interactionSource: MutableInteractionSource? = remember { MutableInteractionSource() },
     indication: Indication? = null,
     crossinline onClick: () -> Unit,

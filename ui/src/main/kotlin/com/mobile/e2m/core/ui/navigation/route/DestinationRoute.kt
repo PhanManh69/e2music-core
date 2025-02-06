@@ -14,5 +14,6 @@ object DestinationRoute {
         const val FORGOT_PASSWORD = "forgot_password_route"
         const val RESET_PASSWORD = "reset_password_route"
         const val REGISTER = "register_route"
+        const val REGISTRATION_SUCCESSFUL = "registration_successful_route"
     }
 }

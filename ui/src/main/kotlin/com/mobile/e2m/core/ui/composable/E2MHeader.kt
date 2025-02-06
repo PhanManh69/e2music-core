@@ -14,6 +14,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Dp
 import com.mobile.e2m.core.ui.theme.E2MTheme
 
 @Composable
@@ -21,9 +22,9 @@ fun E2MHeader(
     modifier: Modifier = Modifier,
     iconId: Int? = null,
     title: String? = null,
+    topPadding: Dp = WindowInsets.statusBars.asPaddingValues().calculateTopPadding(),
     leadingIconOnClick: () -> Unit = { },
 ) {
-    val topPadding = WindowInsets.statusBars.asPaddingValues().calculateTopPadding()
     val color = E2MTheme.alias.color
     val size = E2MTheme.alias.size
 

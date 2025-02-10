@@ -1,19 +1,45 @@
 package com.mobile.e2m.core.ui.navigation.route
 
-object DestinationRoute {
-    object MainRoute {
-        const val ROOT = "root_route"
-        const val HOME = "home_route"
+import kotlinx.serialization.Serializable
+
+@Serializable
+sealed class AppNavigationRoute {
+
+    @Serializable
+    data object Account : AppNavigationRoute() {
+
+        @Serializable
+        data object Begin : AppNavigationRoute()
+
+        @Serializable
+        data object Started : AppNavigationRoute()
+
+        @Serializable
+        data object Login : AppNavigationRoute()
+
+        @Serializable
+        data object ForgotPassword : AppNavigationRoute()
+
+        @Serializable
+        data class ResetPassword(val userId: Int) : AppNavigationRoute() {
+            fun toRoute(): String = "reset_password/$userId"
+
+            companion object {
+                const val ROUTE = "reset_password/{userId}"
+            }
+        }
+
+        @Serializable
+        data object Register : AppNavigationRoute()
+
+        @Serializable
+        data object RegistrationSuccessful : AppNavigationRoute()
     }
 
-    object AccountRoute {
-        const val ROOT = "root_route"
-        const val BEGIN = "begin_route"
-        const val STARTED = "started_route"
-        const val LOGIN = "login_route"
-        const val FORGOT_PASSWORD = "forgot_password_route"
-        const val RESET_PASSWORD = "reset_password_route"
-        const val REGISTER = "register_route"
-        const val REGISTRATION_SUCCESSFUL = "registration_successful_route"
+    @Serializable
+    data object Main : AppNavigationRoute() {
+
+        @Serializable
+        data object Home : AppNavigationRoute()
     }
 }

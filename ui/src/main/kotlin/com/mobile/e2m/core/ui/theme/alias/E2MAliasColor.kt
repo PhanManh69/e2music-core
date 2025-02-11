@@ -32,6 +32,8 @@ data class E2MAliasColor(
         val textFieldPlaceholder: Color,
         val error: Color,
         val blur2Light: Color,
+        val white200: Color,
+        val white600: Color,
     )
 
     data class Border(
@@ -41,6 +43,7 @@ data class E2MAliasColor(
         val error: Color,
         val blur2Light: Color,
         val whiteDark: Color,
+        val blackLight: Color,
     )
 
     data class Icon(
@@ -72,6 +75,8 @@ data class E2MAliasColor(
                 textFieldPlaceholder = global.black.color800,
                 error = global.red.color200,
                 blur2Light = global.blurLight.color800,
+                white200 = global.write.color200,
+                white600 = global.write.color600,
             ),
             border = Border(
                 white = global.write.color100,
@@ -80,6 +85,7 @@ data class E2MAliasColor(
                 error = global.red.color200,
                 blur2Light = global.blurLight.color800,
                 whiteDark = global.write.color800,
+                blackLight = global.black.color800,
             ),
             icon = Icon(
                 black = global.black.color100,

@@ -55,4 +55,7 @@
     <string name="music">Âm nhạc</string>
     <string name="profile">Hồ sơ</string>
     <string name="searchSong">Tìm kiếm bài hát</string>
+    <string name="recommend">Đề xuất</string>
+    <string name="recentlyPlayed">Nghe gần đây</string>
+    <string name="playedAll">Phát tất cả</string>
 </resources>

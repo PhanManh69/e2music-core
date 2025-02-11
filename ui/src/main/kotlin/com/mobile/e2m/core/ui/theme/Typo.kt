@@ -69,6 +69,7 @@ data class E2MTypography(
         val regular: TextStyle,
         val medium: TextStyle,
         val semiBold: TextStyle,
+        val bold: TextStyle,
     )
 
     data class Caption(
@@ -262,6 +263,13 @@ data class E2MTypography(
                 semiBold = TextStyle(
                     fontFamily = E2MFontFamily,
                     fontWeight = FontWeight.SemiBold,
+                    fontSize = 14.sp,
+                    lineHeight = 20.sp,
+                    letterSpacing = (-0.28).sp,
+                ),
+                bold = TextStyle(
+                    fontFamily = E2MFontFamily,
+                    fontWeight = FontWeight.Bold,
                     fontSize = 14.sp,
                     lineHeight = 20.sp,
                     letterSpacing = (-0.28).sp,

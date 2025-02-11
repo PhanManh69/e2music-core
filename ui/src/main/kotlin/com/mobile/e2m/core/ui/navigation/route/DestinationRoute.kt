@@ -37,6 +37,19 @@ sealed class AppNavigationRoute {
     }
 
     @Serializable
+    data object Dashboard : AppNavigationRoute() {
+
+        @Serializable
+        data object Home : AppNavigationRoute()
+
+        @Serializable
+        data object Music : AppNavigationRoute()
+
+        @Serializable
+        data object Profile : AppNavigationRoute()
+    }
+
+    @Serializable
     data object Main : AppNavigationRoute() {
 
         @Serializable

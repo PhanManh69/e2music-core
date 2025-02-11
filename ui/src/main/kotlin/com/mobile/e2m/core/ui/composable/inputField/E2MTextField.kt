@@ -41,6 +41,7 @@ fun E2MTextField(
     iconId: Int? = null,
     maxLines: Int = MAX_LINE,
     onValueChange: ((String) -> Unit)? = null,
+    onFocusChanged: ((FocusState) -> Unit)? = null,
     trailingIconOnClick: () -> Unit = { },
     textStyle: TextStyle = E2MTheme.typography.title.regular,
     visualTransformation: VisualTransformation = VisualTransformation.None,
@@ -48,7 +49,6 @@ fun E2MTextField(
     keyboardActions: KeyboardActions = KeyboardActions.Default,
 ) {
     val isFocused: MutableState<Boolean> = remember { mutableStateOf(false) }
-    val onFocusChanged: ((FocusState) -> Unit)? = null
     val style = E2MTheme.typography
     val size = E2MTheme.alias.size
     val color = E2MTheme.alias.color

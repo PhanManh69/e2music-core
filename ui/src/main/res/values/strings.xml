@@ -35,6 +35,8 @@
     <string name="errorMissingUpperCase">Mật khẩu phải có ít nhất một ký tự in hoa</string>
     <string name="errorMissingLetterDigit">Mật khẩu gồm cả ký tự chữ và số</string>
     <string name="errorEmptyConfirmPassword">Vui lòng xác thực lại mật khẩu của bạn</string>
+    <string name="errorWrongPassword">Mật khẩu không đúng, vui lòng nhập lại!</string>
+    <string name="errorEmptyPassword">Vui lòng nhập mật khẩu của bạn</string>
     <string name="errorWrongResetPassword">Mật khẩu xác thực không khớp</string>
     <string name="errorEmptyUsername">Vui lòng nhập tên đăng nhập của bạn</string>
     <string name="errorWrongFormatUsername">Tên đăng nhập chứa từ 6 đến 18 ký tự</string>
@@ -49,4 +51,8 @@
     <string name="contentAuthenticateOtp2">của bạn</string>
     <string name="registrationSuccessful">Đăng ký thành công</string>
     <string name="contentRegistrationSuccessful">Đang ký tài khoản thành công. Tiếp tục đăng nhập để bắt đầu thưởng thức âm nhạc.</string>
+    <string name="home">Trang chủ</string>
+    <string name="music">Âm nhạc</string>
+    <string name="profile">Hồ sơ</string>
+    <string name="searchSong">Tìm kiếm bài hát</string>
 </resources>

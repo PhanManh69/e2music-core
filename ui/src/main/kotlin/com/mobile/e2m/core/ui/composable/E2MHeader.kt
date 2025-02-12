@@ -8,12 +8,10 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBars
-import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -39,14 +37,12 @@ fun E2MHeader(
             .padding(top = topPadding + size.spacing.small2x)
     ) {
         leadingIconId?.let {
-            Icon(
+            E2MIcon(
                 modifier = Modifier
                     .size(size.icon.smallX)
-                    .align(Alignment.CenterStart)
-                    .debounceClickable { leadingIconOnClick() },
-                painter = painterResource(id = it),
-                contentDescription = null,
-                tint = color.icon.white
+                    .align(Alignment.CenterStart),
+                iconId = it,
+                onClick = { leadingIconOnClick() }
             )
         }
 
@@ -67,14 +63,12 @@ fun E2MHeader(
         }
 
         trailingIconId?.let {
-            Icon(
+            E2MIcon(
                 modifier = Modifier
                     .size(size.icon.smallX)
-                    .align(Alignment.CenterEnd)
-                    .debounceClickable { trailingIconOnClick() },
-                painter = painterResource(id = it),
-                contentDescription = null,
-                tint = color.icon.white
+                    .align(Alignment.CenterEnd),
+                iconId = it,
+                onClick = { trailingIconOnClick() },
             )
         }
     }

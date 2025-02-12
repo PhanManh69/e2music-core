@@ -2,7 +2,6 @@ package com.mobile.e2m.core.ui.composable
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.focusable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsPressedAsState
@@ -22,14 +21,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import coil3.compose.AsyncImage
-import coil3.request.ImageRequest
-import coil3.svg.SvgDecoder
 import com.mobile.e2m.core.ui.theme.E2MTheme
 import com.mobile.e2m.core.ui.composable.E2MButtonStyle.*
 import com.mobile.e2m.core.ui.theme.alias.E2MAliasColor
@@ -126,14 +120,9 @@ fun E2MButton(
         verticalAlignment = Alignment.CenterVertically,
     ) {
         iconId?.let {
-            AsyncImage(
+            E2MAsyncImage(
                 modifier = Modifier.size(size.icon.smallX),
-                model = ImageRequest.Builder(LocalContext.current)
-                    .data(iconId)
-                    .decoderFactory(SvgDecoder.Factory())
-                    .build(),
-                contentDescription = null,
-                contentScale = ContentScale.Fit,
+                imageId = iconId,
             )
         }
 

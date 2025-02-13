@@ -43,29 +43,25 @@ sealed class AppNavigationRoute {
         data object Home : AppNavigationRoute()
 
         @Serializable
-        data object Music : AppNavigationRoute()
+        data object Music : AppNavigationRoute() {
+            @Serializable
+            data object Song : AppNavigationRoute()
+
+            @Serializable
+            data object Playlist : AppNavigationRoute()
+
+            @Serializable
+            data object Album : AppNavigationRoute()
+
+            @Serializable
+            data object Artist : AppNavigationRoute()
+
+            @Serializable
+            data object Genre : AppNavigationRoute()
+        }
 
         @Serializable
         data object Profile : AppNavigationRoute()
-    }
-
-    @Serializable
-    data object Music : AppNavigationRoute() {
-
-        @Serializable
-        data object Song : AppNavigationRoute()
-
-        @Serializable
-        data object Playlist : AppNavigationRoute()
-
-        @Serializable
-        data object Album : AppNavigationRoute()
-
-        @Serializable
-        data object Artist : AppNavigationRoute()
-
-        @Serializable
-        data object Genre : AppNavigationRoute()
     }
 
     @Serializable

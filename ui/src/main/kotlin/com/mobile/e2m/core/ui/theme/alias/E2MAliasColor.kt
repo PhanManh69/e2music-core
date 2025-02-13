@@ -49,6 +49,7 @@ data class E2MAliasColor(
     data class Icon(
         val black: Color,
         val white: Color,
+        val blue2Light: Color,
     )
 
     companion object {
@@ -90,6 +91,7 @@ data class E2MAliasColor(
             icon = Icon(
                 black = global.black.color100,
                 white = global.write.color100,
+                blue2Light = global.blurLight.color800,
             ),
             gradientPrimaryDefault = GradientPrimaryDefault
         )

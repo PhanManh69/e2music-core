@@ -41,6 +41,7 @@ data class E2MAliasSize(
         val large4x: Dp,
         val large5x: Dp,
         val large6x: Dp,
+        val large7x: Dp,
         val max: Dp,
     )
 
@@ -54,6 +55,7 @@ data class E2MAliasSize(
         val medium: Dp,
         val large: Dp,
         val largeX: Dp,
+        val large1X: Dp,
     )
 
     companion object {
@@ -90,6 +92,7 @@ data class E2MAliasSize(
                 large4x = global.size064,
                 large5x = global.size096,
                 large6x = global.size160,
+                large7x = global.size128,
                 max = global.sizeMax,
             ),
             icon = Icon(
@@ -102,6 +105,7 @@ data class E2MAliasSize(
                 medium = global.size040,
                 large = global.size048,
                 largeX = global.size128,
+                large1X = global.size080,
             ),
         )
     }

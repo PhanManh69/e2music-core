@@ -59,8 +59,19 @@
     <string name="recentlyPlayed">Nghe gần đây</string>
     <string name="playedAll">Phát tất cả</string>
     <string name="song">Bài hát</string>
+    <string name="songLower">bài hát</string>
     <string name="playlist">Danh sách phát</string>
     <string name="album">Album</string>
     <string name="artist">Nghệ sĩ</string>
     <string name="genre">Thể loại</string>
+    <string name="playlistYour">Danh sách phát của bạn</string>
+    <string name="viewAll">Xem tất cả</string>
+    <string name="classical">Nhạc cổ điển</string>
+    <string name="country">Nhạc đồng quê</string>
+    <string name="edm">Nhạc điện tử</string>
+    <string name="jazzBlues">Nhạc Jazz và Blues</string>
+    <string name="pop">Nhạc Pop</string>
+    <string name="rapHipHop">Nhạc Rap và Hip-Hop</string>
+    <string name="rock">Nhạc Rock</string>
+    <string name="soulRandB">Nhạc Soul và R&amp;B</string>
 </resources>

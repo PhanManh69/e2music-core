@@ -9,10 +9,10 @@ import androidx.compose.ui.unit.sp
 import com.mobile.e2m.core.ui.R
 
 val E2MFontFamily = FontFamily(
-    Font(R.font.source_code_pro_black, FontWeight.Black),
-    Font(R.font.source_code_pro_bold, FontWeight.Bold),
-    Font(R.font.source_code_pro_medium, FontWeight.Medium),
-    Font(R.font.source_code_pro_light, FontWeight.Light),
+    Font(R.font.sf_pro_black, FontWeight.Black),
+    Font(R.font.sf_pro_bold, FontWeight.Bold),
+    Font(R.font.sf_pro_medium, FontWeight.Medium),
+    Font(R.font.sf_pro_light, FontWeight.Light),
 )
 
 data class E2MTypography(

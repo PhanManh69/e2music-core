@@ -60,7 +60,7 @@ data class E2MAliasColor(
                 white = global.write.color100,
                 black = global.black.color100,
                 whiteButtonFocus = global.write.color800,
-                blurButtonFocus = global.blurDark.color800,
+                blurButtonFocus = global.blurDark.color100,
                 textField = global.write.color400,
                 button = global.write.color400,
                 backgroundDark = global.black.color200,

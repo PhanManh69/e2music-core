@@ -18,6 +18,7 @@ val Size036 = 36.dp
 val Size040 = 40.dp
 val Size048 = 48.dp
 val Size064 = 64.dp
+val Size072 = 72.dp
 val Size080 = 80.dp
 val Size096 = 96.dp
 val Size128 = 128.dp

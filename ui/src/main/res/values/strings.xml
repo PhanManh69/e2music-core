@@ -74,4 +74,18 @@
     <string name="rapHipHop">Nhạc Rap và Hip-Hop</string>
     <string name="rock">Nhạc Rock</string>
     <string name="soulRandB">Nhạc Soul và R&amp;B</string>
+    <string name="followers">Người theo dõi</string>
+    <string name="following">Đang theo dõi</string>
+    <string name="likes">Bài hát đã thích</string>
+    <string name="views">lượt nghe</string>
+    <string name="myMusic">Âm nhạc của bạn</string>
+    <string name="account">Tài khoản</string>
+    <string name="upload">Tải lên</string>
+    <string name="basicSettings">Cài đặt cơ bản</string>
+    <string name="languages">Ngôn ngữ</string>
+    <string name="notification">Thông báo</string>
+    <string name="privacyPolicy">Chính sách bảo mật</string>
+    <string name="support">Trợ giúp</string>
+    <string name="about">Giới thiệu</string>
+    <string name="signOut">Đăng xuất</string>
 </resources>

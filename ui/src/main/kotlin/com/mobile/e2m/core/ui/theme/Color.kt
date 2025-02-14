@@ -41,5 +41,5 @@ val Red400 = Color(0xFFFF5457)
 val Red600 = Color(0xFFFF7375)
 val Red800 = Color(0xFFFF8F91)
 
-val GradientPrimaryDefault = listOf(Color(0xFF1500FF), Color(0xFF1497FF))
+val GradientPrimaryDefault = listOf(Color(0xFF7CC5FF), Color(0xFF1497FF))
 val BackgroundBegin = Color(0xFF262625)

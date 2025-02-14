@@ -41,7 +41,7 @@ private fun getButtonColor(style: E2MButtonStyle, color: E2MAliasColor): ButtonC
     return when (style) {
         Primary -> ButtonColor(
             background = listOf(color.surface.textField),
-            border = color.border.blurDark,
+            border = color.border.blur2Light,
             text = color.text.black,
         )
 
@@ -53,13 +53,13 @@ private fun getButtonColor(style: E2MButtonStyle, color: E2MAliasColor): ButtonC
 
         PrimaryFocus -> ButtonColor(
             background = listOf(color.surface.whiteButtonFocus),
-            border = color.border.blurDark,
+            border = color.border.blur2Light,
             text = color.text.black,
         )
 
         GradientFocus -> ButtonColor(
             background = listOf(color.surface.blurButtonFocus),
-            border = color.border.blurDark,
+            border = color.border.blur2Light,
             text = color.text.white,
         )
     }

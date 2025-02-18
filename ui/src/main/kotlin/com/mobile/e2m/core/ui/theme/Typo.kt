@@ -196,7 +196,7 @@ data class E2MTypography(
                 medium = TextStyle(
                     fontFamily = E2MFontFamily,
                     fontWeight = FontWeight.Medium,
-                    fontSize = 18.sp,
+                    fontSize = 24.sp,
                     lineHeight = 24.sp,
                     letterSpacing = (-0.27).sp,
                 ),

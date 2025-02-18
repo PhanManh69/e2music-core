@@ -23,7 +23,10 @@ fun <T> E2MSelectionLoad(
 
     LazyColumn(
         modifier = modifier.padding(horizontal = size.small),
-        contentPadding = PaddingValues(vertical = size.large),
+        contentPadding = PaddingValues(
+            top = size.large,
+            bottom = size.large5x,      //TODO: has mini player
+        ),
         verticalArrangement = Arrangement.spacedBy(size.small2x),
     ) {
         if (isLoading) {

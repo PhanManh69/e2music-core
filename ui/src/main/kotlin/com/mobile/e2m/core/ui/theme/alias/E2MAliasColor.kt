@@ -22,6 +22,8 @@ data class E2MAliasColor(
         val shadowDark: Color,
         val blur2Light: Color,
         val whiteDark: Color,
+        val black600: Color,
+        val blueLight200: Color,
     )
 
     data class Text(
@@ -34,6 +36,7 @@ data class E2MAliasColor(
         val blur2Light: Color,
         val white200: Color,
         val white600: Color,
+        val black400: Color,
     )
 
     data class Border(
@@ -50,6 +53,7 @@ data class E2MAliasColor(
         val black: Color,
         val white: Color,
         val blue2Light: Color,
+        val black400: Color,
     )
 
     companion object {
@@ -67,6 +71,8 @@ data class E2MAliasColor(
                 shadowDark = global.black.color800,
                 blur2Light = global.blurLight.color800,
                 whiteDark = global.write.color800,
+                black600 = global.black.color600,
+                blueLight200 = global.blurLight.color200,
             ),
             text = Text(
                 white = global.write.color100,
@@ -78,6 +84,7 @@ data class E2MAliasColor(
                 blur2Light = global.blurLight.color800,
                 white200 = global.write.color200,
                 white600 = global.write.color600,
+                black400 = global.black.color400,
             ),
             border = Border(
                 white = global.write.color100,
@@ -92,6 +99,7 @@ data class E2MAliasColor(
                 black = global.black.color100,
                 white = global.write.color100,
                 blue2Light = global.blurLight.color800,
+                black400 = global.black.color400,
             ),
             gradientPrimaryDefault = GradientPrimaryDefault
         )

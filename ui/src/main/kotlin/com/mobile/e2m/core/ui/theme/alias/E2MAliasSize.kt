@@ -57,6 +57,7 @@ data class E2MAliasSize(
         val large: Dp,
         val largeX: Dp,
         val large1X: Dp,
+        val large2X: Dp,
     )
 
     companion object {
@@ -108,6 +109,7 @@ data class E2MAliasSize(
                 large = global.size048,
                 largeX = global.size128,
                 large1X = global.size080,
+                large2X = global.size240,
             ),
         )
     }

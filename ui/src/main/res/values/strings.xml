@@ -97,4 +97,8 @@
     <string name="driveMode">Chế độ lái xe</string>
     <string name="privacySocial">Riêng tư &amp; Xã hội</string>
     <string name="audioQuality">Chất lượng âm thanh</string>
+    <string name="playmusic">Phát nhạc</string>
+    <string name="comment">Bình luận</string>
+    <string name="save">Lưu</string>
+    <string name="share">Chia sẻ</string>
 </resources>

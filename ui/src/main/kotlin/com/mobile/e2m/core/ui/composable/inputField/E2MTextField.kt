@@ -26,6 +26,7 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.mobile.e2m.core.ui.composable.E2MIcon
+import com.mobile.e2m.core.ui.composable.debounceClickable
 import com.mobile.e2m.core.ui.composable.shadowCustom
 import com.mobile.e2m.core.ui.theme.E2MTheme
 import com.mobile.e2m.core.ui.util.ValueConfig.MAX_LINE
@@ -107,10 +108,10 @@ fun E2MTextField(
                     E2MIcon(
                         modifier = Modifier
                             .padding(end = size.spacing.small)
-                            .size(size.icon.smallX),
+                            .size(size.icon.smallX)
+                            .debounceClickable { trailingIconOnClick() },
                         iconId = iconId,
                         tint = color.icon.black,
-                        onClick = { trailingIconOnClick() },
                     )
             },
             keyboardOptions = keyboardOptions,

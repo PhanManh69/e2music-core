@@ -17,11 +17,10 @@ fun E2MIcon(
     iconId: Int? = null,
     contentDescription: String? = null,
     tint: Color = E2MTheme.alias.color.icon.white,
-    onClick: () -> Unit = { },
 ) {
     iconId?.let {
         Icon(
-            modifier = modifier.debounceClickable { onClick() },
+            modifier = modifier,
             painter = painterResource(id = iconId),
             contentDescription = contentDescription,
             tint = tint,

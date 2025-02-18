@@ -20,11 +20,10 @@ fun E2MImage(
     imageId: Int? = null,
     contentDescription: String? = null,
     contentScale: ContentScale = ContentScale.Crop,
-    onClick: () -> Unit = { },
 ) {
     imageId?.let {
         Image(
-            modifier = modifier.debounceClickable { onClick() },
+            modifier = modifier,
             painter = painterResource(id = it),
             contentDescription = contentDescription,
             contentScale = contentScale,

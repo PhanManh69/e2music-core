@@ -65,6 +65,41 @@ sealed class AppNavigationRoute {
     }
 
     @Serializable
+    data object Daily : AppNavigationRoute() {
+
+        @Serializable
+        data object Playmusic : AppNavigationRoute()
+
+        @Serializable
+        data object Menu : AppNavigationRoute() {
+
+            @Serializable
+            data object AudioQuality : AppNavigationRoute()
+
+            @Serializable
+            data object DriveMode : AppNavigationRoute()
+
+            @Serializable
+            data object Equalizer : AppNavigationRoute()
+
+            @Serializable
+            data object LocalFile : AppNavigationRoute()
+
+            @Serializable
+            data object Memory : AppNavigationRoute()
+
+            @Serializable
+            data object PrivacySocial : AppNavigationRoute()
+
+            @Serializable
+            data object Theme : AppNavigationRoute()
+
+            @Serializable
+            data object Timer : AppNavigationRoute()
+        }
+    }
+
+    @Serializable
     data object Main : AppNavigationRoute() {
 
         @Serializable

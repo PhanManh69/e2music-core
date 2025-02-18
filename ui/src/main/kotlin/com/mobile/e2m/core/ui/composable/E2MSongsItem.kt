@@ -108,10 +108,11 @@ fun E2MSongsItem(
 
         iconId?.let {
             E2MIcon(
-                modifier = Modifier.size(size.icon.smallX),
+                modifier = Modifier
+                    .size(size.icon.smallX)
+                    .debounceClickable { iconOnClick() },
                 iconId = it,
                 tint = color.icon.blue2Light,
-                onClick = { iconOnClick() }
             )
         }
     }

@@ -40,9 +40,9 @@ fun E2MHeader(
             E2MIcon(
                 modifier = Modifier
                     .size(size.icon.smallX)
-                    .align(Alignment.CenterStart),
+                    .align(Alignment.CenterStart)
+                    .debounceClickable { leadingIconOnClick() },
                 iconId = it,
-                onClick = { leadingIconOnClick() }
             )
         }
 
@@ -66,9 +66,9 @@ fun E2MHeader(
             E2MIcon(
                 modifier = Modifier
                     .size(size.icon.smallX)
-                    .align(Alignment.CenterEnd),
+                    .align(Alignment.CenterEnd)
+                    .debounceClickable { trailingIconOnClick() },
                 iconId = it,
-                onClick = { trailingIconOnClick() },
             )
         }
     }

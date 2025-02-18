@@ -19,11 +19,10 @@ fun E2MAsyncImage(
     imageId: Int? = null,
     contentDescription: String? = null,
     contentScale: ContentScale = ContentScale.Fit,
-    onClick: () -> Unit = { },
 ) {
     imageId?.let {
         AsyncImage(
-            modifier = modifier.debounceClickable { onClick() },
+            modifier = modifier,
             model = ImageRequest.Builder(LocalContext.current)
                 .data(it)
                 .decoderFactory(SvgDecoder.Factory())

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="appName">E2Music</string>
     <string name="titleStarted">E2Music - Âm Nhạc Đậm Chất Cảm Xúc</string>
     <string name="introduceStarted">Khám phá kho nhạc đa dạng, cá nhân hóa trải nghiệm nghe nhạc
         chỉ với vài cú chạm. E2Music - nơi kết nối cảm xúc qua từng giai điệu.</string>
@@ -88,4 +89,12 @@
     <string name="support">Trợ giúp</string>
     <string name="about">Giới thiệu</string>
     <string name="signOut">Đăng xuất</string>
+    <string name="theme">Chủ đề</string>
+    <string name="timer">Hẹn giờ</string>
+    <string name="equalizer">Cân bằng âm thanh</string>
+    <string name="memory">Bộ nhớ</string>
+    <string name="localFile">Tập tin cục bộ</string>
+    <string name="driveMode">Chế độ lái xe</string>
+    <string name="privacySocial">Riêng tư &amp; Xã hội</string>
+    <string name="audioQuality">Chất lượng âm thanh</string>
 </resources>

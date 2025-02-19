@@ -101,4 +101,9 @@
     <string name="comment">Bình luận</string>
     <string name="save">Lưu</string>
     <string name="share">Chia sẻ</string>
+    <string name="autoplay">Tự động phát</string>
+    <string name="explainAutoplay">Phát nội dung tương tự để nghe liên tục</string>
+    <string name="cancel">Hủy</string>
+    <string name="doYouWantToLogOut">Bạn có muốn đăng xuất khỏi hệ thống?</string>
+    <string name="permissionDeniedMessage">Bạn cần cấp quyền thông báo để sử dụng ứng dụng!</string>
 </resources>

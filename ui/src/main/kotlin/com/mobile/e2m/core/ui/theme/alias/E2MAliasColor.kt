@@ -24,6 +24,8 @@ data class E2MAliasColor(
         val whiteDark: Color,
         val black600: Color,
         val blueLight200: Color,
+        val green200: Color,
+        val red200: Color,
     )
 
     data class Text(
@@ -73,6 +75,8 @@ data class E2MAliasColor(
                 whiteDark = global.write.color800,
                 black600 = global.black.color600,
                 blueLight200 = global.blurLight.color200,
+                green200 = global.green.color200,
+                red200 = global.red.color200,
             ),
             text = Text(
                 white = global.write.color100,

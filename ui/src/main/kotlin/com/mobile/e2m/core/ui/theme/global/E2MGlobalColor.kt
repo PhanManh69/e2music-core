@@ -9,6 +9,7 @@ data class E2MGlobalColor(
     val blurDark: BaseColor,
     val blurLight: BaseColor,
     val red: BaseColor,
+    val green: BaseColor,
 ) {
     data class BaseColor(
         val color100: Color,
@@ -54,6 +55,13 @@ data class E2MGlobalColor(
                 color400 = Red400,
                 color600 = Red600,
                 color800 = Red800,
+            ),
+            green = BaseColor(
+                color100 = Green100,
+                color200 = Green200,
+                color400 = Green400,
+                color600 = Green600,
+                color800 = Green800,
             )
         )
     }

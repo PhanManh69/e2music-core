@@ -52,6 +52,8 @@
     <string name="contentAuthenticateOtp2">của bạn</string>
     <string name="registrationSuccessful">Đăng ký thành công</string>
     <string name="contentRegistrationSuccessful">Đang ký tài khoản thành công. Tiếp tục đăng nhập để bắt đầu thưởng thức âm nhạc.</string>
+    <string name="resetPasswordSuccessful">Đặt lại mật khẩu thành công</string>
+    <string name="contentResetPasswordSuccessful">Đặt lại mật khẩu thành công. Tiếp tục đăng nhập để bắt đầu thưởng thức âm nhạc.</string>
     <string name="home">Trang chủ</string>
     <string name="music">Âm nhạc</string>
     <string name="profile">Hồ sơ</string>
@@ -106,4 +108,5 @@
     <string name="cancel">Hủy</string>
     <string name="doYouWantToLogOut">Bạn có muốn đăng xuất khỏi hệ thống?</string>
     <string name="permissionDeniedMessage">Bạn cần cấp quyền thông báo để sử dụng ứng dụng!</string>
+    <string name="nextSong">Bài hát tiếp theo</string>
 </resources>

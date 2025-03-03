@@ -14,6 +14,7 @@ import kotlinx.collections.immutable.ImmutableList
 fun <T> E2MSelectionLoad(
     modifier: Modifier = Modifier,
     isLoading: Boolean = false,
+    checkMiniPlayer: Boolean = false,
     numberElementsLoad: Int = 10,
     items: ImmutableList<T>,
     itemContentComposable: @Composable ((T) -> Unit) = { },
@@ -25,7 +26,7 @@ fun <T> E2MSelectionLoad(
         modifier = modifier.padding(horizontal = size.small),
         contentPadding = PaddingValues(
             top = size.large,
-            bottom = size.large5x,      //TODO: has mini player
+            bottom = if (checkMiniPlayer) size.large9x else size.large,
         ),
         verticalArrangement = Arrangement.spacedBy(size.small2x),
     ) {

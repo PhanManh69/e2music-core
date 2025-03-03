@@ -34,6 +34,9 @@ sealed class AppNavigationRoute {
 
         @Serializable
         data object RegistrationSuccessful : AppNavigationRoute()
+
+        @Serializable
+        data object ResetPasswordSuccessful : AppNavigationRoute()
     }
 
     @Serializable

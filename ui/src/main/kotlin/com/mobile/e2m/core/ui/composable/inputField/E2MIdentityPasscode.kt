@@ -148,7 +148,7 @@ private fun PasscodeDigit(
             )
             .border(
                 width = size.stroke.thickX,
-                color = if (isFocused && isFocusedTextField) color.border.blurDark else color.border.textField,
+                color = if (isFocused && isFocusedTextField) color.border.blur2Light else color.border.textField,
                 shape = CircleShape
             ),
         contentAlignment = Alignment.Center
@@ -156,7 +156,7 @@ private fun PasscodeDigit(
         Text(
             text = digit?.toString() ?: "_",
             style = style.h4.regular,
-            color = if (isFocused && isFocusedTextField) color.text.blurDark else color.text.black
+            color = if (isFocused && isFocusedTextField) color.text.blur2Light else color.text.black
         )
     }
 }

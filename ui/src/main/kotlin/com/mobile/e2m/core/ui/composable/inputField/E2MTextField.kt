@@ -52,7 +52,7 @@ fun E2MTextField(
     val size = E2MTheme.alias.size
     val color = E2MTheme.alias.color
     val borderColor = when {
-        isFocused.value && caption.isNullOrEmpty() -> color.border.blurDark
+        isFocused.value && caption.isNullOrEmpty() -> color.border.blur2Light
         !caption.isNullOrEmpty() -> color.border.error
         else -> color.border.textField
     }

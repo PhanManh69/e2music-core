@@ -16,6 +16,7 @@ import androidx.compose.ui.draw.BlurredEdgeTreatment
 import androidx.compose.ui.draw.blur
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Shape
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
@@ -25,9 +26,9 @@ import com.mobile.e2m.core.ui.theme.E2MTheme
 
 @Immutable
 data class E2MSongsData(
-    val imageId: Int? = null,
-    val name: String? = null,
-    val singer: String? = null,
+    val imageUrl: String?,
+    val name: String?,
+    val singer: String?,
 )
 
 @Composable
@@ -53,8 +54,8 @@ fun E2MSongsItem(
             modifier = Modifier.debounceClickable { imageOnClick() },
             contentAlignment = Alignment.Center,
         ) {
-            songItem.imageId?.let {
-                E2MImage(
+            songItem.imageUrl?.let {
+                E2MAsyncImage(
                     modifier = Modifier
                         .size(size.icon.large)
                         .clip(shape)
@@ -67,8 +68,9 @@ fun E2MSongsItem(
                             radius = blur,
                             edgeTreatment = BlurredEdgeTreatment(shape)
                         ),
-                    imageId = it,
+                    imageUrl = it,
                     contentDescription = songItem.name,
+                    contentScale = ContentScale.Crop,
                 )
             }
 
@@ -122,7 +124,7 @@ fun E2MSongsItem(
 @Composable
 fun E2MSingsItemPreview() {
     val songItem = E2MSongsData(
-        imageId = R.drawable.img_song,
+        imageUrl = "",
         name = "Tên bài hát",
         singer = "Tên nghệ sĩ",
     )

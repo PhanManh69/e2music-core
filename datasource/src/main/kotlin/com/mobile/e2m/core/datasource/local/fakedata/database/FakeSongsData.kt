@@ -1,6 +1,5 @@
 package com.mobile.e2m.core.datasource.local.fakedata.database
 
-import com.mobile.e2m.core.ui.R
 import com.mobile.e2m.core.datasource.local.fakedata.model.SongsModel
 import kotlinx.collections.immutable.PersistentList
 import kotlinx.collections.immutable.persistentListOf
@@ -10,7 +9,7 @@ fun fakeSongsData(): PersistentList<SongsModel> {
     val itemsList = persistentListOf(
         SongsModel(
             id = 0,
-            linkSong = R.raw.mp3_2am,
+            linkSong = null,
             avatar = "https://lh3.googleusercontent.com/KmxAsJHOpaGZgUnXolBVc9VF9xxn1EXcY_Usk-KfcIyQJ6QiVRYEEZiJKShMM_DI4EzpIJ-rw241wNYm=w544-h544-l90-rj",
             name = "2AM",
             singer = "JustaTee - BigDaddy",
@@ -20,7 +19,7 @@ fun fakeSongsData(): PersistentList<SongsModel> {
         ),
         SongsModel(
             id = 1,
-            linkSong = R.raw.mp3_anh_nang_cua_anh,
+            linkSong = null,
             avatar = "https://lh3.googleusercontent.com/Qmh3Jo9MBakiKDtfRZP6jhpgsQWuO0-Wh-JaRQDsEcVpTHQUhq1PLRbCERWXBgWtmg5DzkmQWtuZrtKd6A=w544-h544-l90-rj",
             name = "Ánh nắng của anh",
             singer = "Đức Phúc",
@@ -30,7 +29,7 @@ fun fakeSongsData(): PersistentList<SongsModel> {
         ),
         SongsModel(
             id = 2,
-            linkSong = R.raw.mp3_ngay_em_dep_nhat,
+            linkSong = null,
             avatar = "https://lh3.googleusercontent.com/ptSXANqzjDIXHlhy6usQZ0Rvbxy2GEFbQ0gHZcqploPGy9OLo5gbb_wc4yVLXs-Tk8VYJaqydOPvEsYVEg=w544-h544-l90-rj",
             name = "Ngày em đẹp nhất",
             singer = "Tama",
@@ -40,7 +39,7 @@ fun fakeSongsData(): PersistentList<SongsModel> {
         ),
         SongsModel(
             id = 3,
-            linkSong = R.raw.mp3_phia_sau_mot_co_gai,
+            linkSong = null,
             avatar = "https://lh3.googleusercontent.com/9fE20eMGF4KeEmzNLgba9buDFfTIs68bj1l4U8F-jIKiSv-QoSOMlobhHfy0-puH8ly4-XyAyK1iI5s=w544-h544-l90-rj",
             name = "Phía Sau Một Cô Gái",
             singer = "Soobin",
@@ -50,7 +49,7 @@ fun fakeSongsData(): PersistentList<SongsModel> {
         ),
         SongsModel(
             id = 4,
-            linkSong = R.raw.mp3_song_cho_het_doi_thanh_xuan,
+            linkSong = null,
             avatar = "https://lh3.googleusercontent.com/Erh42SO2L7fpCw22bp8ViFyWgiCbwnU4k-66eiO3DaV2YQ_DUBsd1KUoo4mVmGWNAOni3wBGsayyNuE=w544-h544-l90-rj",
             name = "Sống cho hết đời thanh xuân 2",
             singer = "BCTM và TaynguyenSound",
@@ -60,7 +59,7 @@ fun fakeSongsData(): PersistentList<SongsModel> {
         ),
         SongsModel(
             id = 5,
-            linkSong = R.raw.mp3_ngay_mai_nguoi_ta_lay_chong,
+            linkSong = null,
             avatar = "https://lh3.googleusercontent.com/YXUb8Reei3riqh9s0xO2m5TE9NF8txl5-mjN0XN0wwbVw-tKxfpd6q0LFJqqWAfpWnMBbtIhykQ_7NM=w544-h544-l90-rj",
             name = "Ngày mai người ta lấy chồng",
             singer = "Thành Đạt",
@@ -70,7 +69,7 @@ fun fakeSongsData(): PersistentList<SongsModel> {
         ),
         SongsModel(
             id = 6,
-            linkSong = R.raw.mp3_gia_cung_nhau_la_duoc,
+            linkSong = null,
             avatar = "https://lh3.googleusercontent.com/1u5cwy9cgfquRQrQCr71Q1Pu1NnC6IhZSYU5LlSm-z7cfSIhJuMbrhVr6-YQT4tsngtz7tIRvdDVZypz=w544-h544-l90-rj",
             name = "Già cùng nhau là được",
             singer = "Tùng, PC và TaynguyenSound",
@@ -80,7 +79,7 @@ fun fakeSongsData(): PersistentList<SongsModel> {
         ),
         SongsModel(
             id = 7,
-            linkSong = R.raw.mp3_yeu_thuong_ngay_do,
+            linkSong = null,
             avatar = "https://i.ytimg.com/vi/A_DsyE_7SLM/hq720.jpg?sqp=-oaymwEXCNUGEOADIAQqCwjVARCqCBh4INgESFo&rs=AMzJL3nx2rHJa3uWJusnusDTMfz4GD_kIg",
             name = "Yêu Thương Ngày Đó",
             singer = "Soobin",
@@ -90,7 +89,7 @@ fun fakeSongsData(): PersistentList<SongsModel> {
         ),
         SongsModel(
             id = 8,
-            linkSong = R.raw.mp3_mang_tien_ve_cho_me,
+            linkSong = null,
             avatar = "https://i.ytimg.com/vi/UVbv-PJXm14/hq720.jpg?sqp=-oaymwEXCNUGEOADIAQqCwjVARCqCBh4INgESFo&rs=AMzJL3mB2RoY1Ctu1AvgD2LjvJcDAiWX1Q",
             name = "Mang tiền về cho mẹ",
             singer = "Đen Vâu",
@@ -100,7 +99,7 @@ fun fakeSongsData(): PersistentList<SongsModel> {
         ),
         SongsModel(
             id = 9,
-            linkSong = R.raw.mp3_bai_nay_chill_phet,
+            linkSong = null,
             avatar = "https://lh3.googleusercontent.com/aF7yn-KQzQrDvdAJ3wZ9RaTu0YdTV0wpnFydubf6PZ7JSOFNp41hMljfR3kSjveyinqKUt6U219I6M9w=w544-h544-l90-rj",
             name = "Bài này chill phết",
             singer = "Đen Vâu",
